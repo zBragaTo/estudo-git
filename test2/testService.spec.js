@@ -55,14 +55,14 @@ describe('Testando função usuarioExiste de userService', () => {
     });
 
     it('deve retornar TRUE para senha valida', () => {
-        const email = 'validoemail@mail.com';
-        const senha = 12345678;
+        const email = 'valido@mail.com';
+        const senha = 123456;
         expect(usuarioExiste(email, senha, testeDB)).toBe(true);
     });
 
     it('deve executar em menos de 1 milissegundo para um email existente', () => {
-        const email = 'valido@mail.com';
-        const senha = 123456;
+        const email = 'validoa12@mail.com';
+        const senha = 12345665;
 
         const start = Date.now();
         usuarioExiste(email, senha, testeDB);
